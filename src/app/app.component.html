@@ -1,0 +1,9 @@
+<ion-app>
+  <ion-router-outlet></ion-router-outlet>
+
+  <ion-modal trigger="open-modal" [isOpen]="dataHelper.openCalendar">
+    <ng-template>
+      <ion-datetime presentation="date" (ionChange)="dataHelper.onCalendarConfirm($event)" (ionCancel)="dataHelper.onCalendarCancel($event)" showDefaultButtons></ion-datetime>
+    </ng-template>
+  </ion-modal>
+</ion-app>

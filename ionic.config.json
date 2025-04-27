@@ -1,0 +1,7 @@
+{
+  "name": "mind-draft",
+  "integrations": {
+    "capacitor": {}
+  },
+  "type": "angular"
+}

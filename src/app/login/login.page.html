@@ -1,0 +1,30 @@
+<ion-content>
+  <div class="wrapper">
+    <div class="image ion-text-center">
+      <img src="./assets/icon/logo.PNG">
+    </div>
+    <div class="title ion-text-center"><span>Mind</span> Draft</div>
+    <form [formGroup]="loginForm">
+      <ion-input type="Email" placeholder="Email" formControlName="email" [(ngModel)]="dataHelper.user.email"></ion-input>
+      <div class="error" *ngIf="loginForm.get('email').invalid && loginForm.get('email').touched">
+        Please enter a valid email
+      </div>
+
+      <ion-input type="password" placeholder="Password" class="second-input" formControlName="password" [(ngModel)]="dataHelper.user.password"></ion-input>
+      <div class="error" *ngIf="loginForm.get('password').invalid && loginForm.get('password').touched">
+        Password must be at least 8 characters
+      </div>
+    </form>
+
+    <div class="forgot">Forgot Password</div>
+      
+    <ion-button expand="block" class="btn" (click)="onSubmit()">Login</ion-button>
+  </div>
+</ion-content>
+<ion-footer class="ion-no-border">
+  <ion-toolbar>
+    <div class="footer-text ion-text-center">
+      Don't have an account? <span (click)="goToRegister()">Sign up here</span>
+    </div>
+  </ion-toolbar>
+</ion-footer>

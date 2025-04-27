@@ -1,0 +1,50 @@
+.wrapper{
+    padding:20px;
+}
+.image-container{
+    width: 120px;
+    height: 120px; 
+    margin: 0 auto 30px;
+    position: relative;
+}
+.userimage{
+    width: 120px;
+    height: 120px;
+    border-radius:100px;
+    overflow: hidden;
+
+    img{
+        width: 100%;
+        height: 1005;
+        object-fit: cover;
+    }
+}
+.cam-btn{
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    width: 40px;
+    min-height: 40px !important;
+    font-size: 16px !important;
+    font-weight: 500 !important;
+    --border-radius: 50px !important;
+    --box-shadow:none !important;
+    --background: var(--primary-color) !important;
+    --padding-start:0 !important;
+    --padding-end:0 !important;
+    --padding-inline-start: 0 !important;
+    --padding-inline-end: 0 !important;
+
+    ion-icon{
+        font-size: 25px;
+        color:#ffffff;
+    }
+}
+
+ion-input{
+    margin-top:15px;
+}
+
+.btn{
+    margin-top: 50px;
+}

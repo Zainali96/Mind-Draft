@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Mind Draft</string>
+    <string name="title_activity_main">Mind Draft</string>
+    <string name="package_name">com.minddraft.minddraft</string>
+    <string name="custom_url_scheme">com.minddraft.minddraft</string>
+</resources>

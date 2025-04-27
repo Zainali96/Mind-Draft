@@ -1,0 +1,49 @@
+<ion-header class="ion-no-border">
+  <ion-toolbar>
+    <ion-title>
+      <ion-button class="back-round-btn" (click)="back()">
+        <ion-icon name="chevron-back"></ion-icon>
+      </ion-button>
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content>
+  <div class="wrapper">
+    <div class="image-container">
+      <div class="userimage">
+        <img [src]="dataHelper.user.profileImage" onError="this.src='./assets/icon/user.png'">
+      </div>
+      <ion-button class="cam-btn" (click)="dataHelper.uploadImage()">
+        <ion-icon name="camera"></ion-icon>
+      </ion-button>
+    </div>
+
+    <form [formGroup]="registerForm">
+      <ion-input type="text" placeholder="Full Name" formControlName="name" [(ngModel)]="dataHelper.user.fullName"></ion-input>
+      <div class="error" *ngIf="registerForm.get('name').invalid && registerForm.get('name').touched">
+        Full name must be at least 3 characters
+      </div>
+
+      <ion-input type="text" placeholder="Date Of Birth"  [(ngModel)]="dataHelper.user.dateOfBirth" [ngModelOptions]="{standalone: true}" (click)="dataHelper.openCalendar = true" readonly></ion-input>
+
+      <ion-input type="email" placeholder="Email" formControlName="email" [(ngModel)]="dataHelper.user.email"></ion-input>
+      <div class="error" *ngIf="registerForm.get('email').invalid && registerForm.get('email').touched">
+        Please enter a valid email
+      </div>
+
+      <ion-input type="password" placeholder="Password" class="second-input" formControlName="password" [(ngModel)]="dataHelper.user.password"></ion-input>
+      <div class="error" *ngIf="registerForm.get('password').invalid && registerForm.get('password').touched">
+        Password must be at least 8 characters
+      </div>
+
+      <ion-input type="password" placeholder="Confirm Password" class="second-input" formControlName="confirmPassword" [(ngModel)]="dataHelper.user.confirmPassword"></ion-input>
+      <div class="error" *ngIf="registerForm.get('confirmPassword').invalid && registerForm.get('confirmPassword').touched">
+        Confirm Password must be at least 8 characters
+      </div>
+    </form>
+
+    <ion-button expand="block" class="btn" (click)="onSubmit()">Submit</ion-button>
+
+  </div>
+</ion-content>
