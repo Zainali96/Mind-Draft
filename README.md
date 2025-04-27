@@ -13,6 +13,15 @@ Install the angluar cli globaly by run this command in cmd
 npm install -g @angular/cli
 ```
 
+# Ionic Cli
+
+Install the angluar cli globaly by run this command in cmd
+```https
+npm install -g @ionic/cli
+```
+
+
+
 # Install Packages
 Go to folder path of project then run this command to install the packages
 
